@@ -1,9 +1,17 @@
+.main {
+	margin: auto;
+	position: absolute;
+	top: 10%;
+	left: 0%;
+	right: 0%;
+	bottom: 10%;
+}
+
 html {
 	background: rgba(0, 0, 0, 0.7) url('../media/image/dirt.png');
-	background-size: 15%;
-	/* background-repeat: no-repeat; */
-	/* background-attachment: fixed; */
-    background-blend-mode: darken;
+	background-size: 10%;
+	background-attachment: fixed;
+	background-blend-mode: darken;
 }
 
 body,
@@ -15,7 +23,9 @@ th {
 	line-height: 48px;
 	text-align: center;
 	color: whitesmoke;
+	text-shadow: 1px 1px black;
 }
+
 
 .button {
 	border: none;
@@ -30,11 +40,11 @@ th {
 	background-clip: border-box;
 	text-align: center;
 	text-decoration: none;
-	text-shadow: 1px 1px gray, 1px 1px gray;
+	text-shadow: 1px 1px gray;
 	font-size: 20px;
 }
 
-.button:hover{
+.button:hover {
 	transition: 0.1s;
 	border: none;
 	font-family: Minecraft, Unifont, sans-serif;
@@ -49,11 +59,11 @@ th {
 	text-align: center;
 	text-decoration: none;
 	color: gold;
-	text-shadow: 1px 1px black, 1px 1px black;
+	text-shadow: 1px 1px black;
 	font-size: 20px;
 }
 
-.button:focus{
+.button:focus {
 	transition: 0.1s;
 	border: none;
 	font-family: Minecraft, Unifont, sans-serif;
@@ -68,7 +78,7 @@ th {
 	text-align: center;
 	text-decoration: none;
 	color: gold;
-	text-shadow: 1px 1px black, 1px 1px black;
+	text-shadow: 1px 1px black;
 	font-size: 20px;
 }
 
@@ -87,5 +97,62 @@ th {
 	text-decoration: none;
 	color: whitesmoke;
 	font-size: 20px;
+	text-shadow: 1px 1px black;
 	cursor: not-allowed;
+}
+
+/* 音乐播放和暂停 */
+img#musicico {
+	animation-name: music;
+	animation-timing-function: linear;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+/* 实现动画的旋转 */
+@keyframes music {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	50% {
+		transform: rotate(180deg);
+	}
+
+	100% {
+		transform: rotate(365deg);
+	}
+}
+
+.shiningText {
+	position: absolute;
+	top: 4%;
+	left: 55%;
+	right: 20%;
+	transform: rotate(-30deg);
+	font-size: 28px;
+    color: gold;
+	text-shadow: 1px 1px black;
+    animation-name: shining;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+	}
+
+@keyframes shining {
+    0% {
+		transform: scale(1) rotate(-30deg);
+    }
+
+    25% {
+		transform: scale(.8) rotate(-30deg);
+    }
+
+    50% {
+		transform: scale(1) rotate(-30deg);
+    }
+
+    75% {
+		transform: scale(.8) rotate(-30deg);
+    }
 }
