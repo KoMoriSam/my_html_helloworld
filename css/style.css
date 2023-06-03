@@ -1,6 +1,6 @@
 html {
 	background: rgba(0, 0, 0, 0.7) url('../media/image/dirt.png');
-	background-size: auto 50%;
+	background-size: 15%;
 	/* background-repeat: no-repeat; */
 	/* background-attachment: fixed; */
     background-blend-mode: darken;
@@ -12,7 +12,7 @@ th {
 	font-family: Minecraft, Unifont, sans-serif;
 	font-size: 16px;
 	font-weight: normal;
-	line-height: 32px;
+	line-height: 48px;
 	text-align: center;
 	color: whitesmoke;
 }
@@ -30,6 +30,7 @@ th {
 	background-clip: border-box;
 	text-align: center;
 	text-decoration: none;
+	text-shadow: 1px 1px gray, 1px 1px gray;
 	font-size: 20px;
 }
 
@@ -48,11 +49,12 @@ th {
 	text-align: center;
 	text-decoration: none;
 	color: gold;
+	text-shadow: 1px 1px black, 1px 1px black;
 	font-size: 20px;
 }
 
 .button:focus{
-		transition: 0.1s;
+	transition: 0.1s;
 	border: none;
 	font-family: Minecraft, Unifont, sans-serif;
 	width: 480px;
@@ -66,6 +68,7 @@ th {
 	text-align: center;
 	text-decoration: none;
 	color: gold;
+	text-shadow: 1px 1px black, 1px 1px black;
 	font-size: 20px;
 }
 
