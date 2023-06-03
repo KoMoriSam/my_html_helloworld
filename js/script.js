@@ -1,14 +1,14 @@
 function playSound() {
-    var audio = new Audio('../media/audio/click.wav');
-    audio.play();
+	var audio = new Audio('../media/audio/click.wav');
+	audio.play();
 }
 
 function playSoundAndRedirect(url) {
-  var audio = new Audio('../media/audio/click.wav');
-  audio.play();
-  setTimeout(function() {
-    window.location.href = url;
-  }, audio.duration * 1000);
+	var audio = new Audio('../media/audio/click.wav');
+	audio.play();
+	setTimeout(function () {
+		window.location.href = url;
+	}, audio.duration * 1000);
 }
 
 // 动画旋转
@@ -17,33 +17,26 @@ var musicico = document.getElementById('musicico')   //获取音乐图标
 var tem = true  //设置一个变量，用来控制音乐是否在播放。
 
 //定义一个函数，当用户单击的时候触发这个函数，从而实现音乐的暂停与播放。
-function musiccc(){
+function musiccc() {
 	//tem用来控制音乐当前是否在播放。true代表音乐正在播放，false代表音乐当前正在处于暂停的状态。
-	if(tem == false){
+	if (tem == false) {
 		music.play()  //播放音乐
-		tem = true  
+		tem = true
 		document.getElementById('musicico').style.animationPlayState = 'running'  //播放音乐图标
-	}else{
+	} else {
 		music.pause()  //暂停音乐
 		tem = false
 		document.getElementById('musicico').style.animationPlayState = 'paused'  //暂停音乐图标
 	}
 }
 
-const xhr = new XMLHttpRequest();
-xhr.open("GET", "../media/text/splashes.json");
-
-xhr.onload = () => {
-  if (xhr.status === 200) {
-    const data = JSON.parse(xhr.responseText);
-    const list = document.getElementById("string-list");
-
-    data.strings.forEach(str => {
-      const item = document.createElement("li");
-      item.innerHTML = str;
-      list.appendChild(item);
-    });
-  }
-};
-
-xhr.send();
+// 获取json文件中splashes数组内的字符串数据
+fetch('../media/text/splashes.json')
+	.then(response => response.json())
+	.then(data => {
+		const splashes = data.splashes;
+		// 将字符串数组渲染到页面上
+		const splashElem = document.getElementById('splash');
+		splashElem.innerHTML = splashes[Math.floor(Math.random() * splashes.length)];
+	})
+	.catch(error => console.error(error));
