@@ -1,0 +1,64 @@
+html {
+    font-size: 10px;
+    background: url(./壁纸.jpeg) bottom center;
+    /* 指定背景图片的大小 */
+    /* cover表示保持图片本身比例并完全覆盖定位区域的最小大小 */
+    background-size: cover;
+}
+ 
+body,html {
+    margin: 0;
+    padding: 0;
+    /* 字体样式 */
+    font-family: sans-serif;
+}
+ 
+.keys {
+    /* 让所有弹性盒模型对象的子元素都有相同的长度，且忽略它们内部的内容： */
+    /* 粗浅的理解就是形成一个相对比例 */
+    display: flex;
+    flex: 1;
+    /* 能够设置元素的最小高度 */
+    /* vh和vw是视口概念 */
+    min-height: 100vh;
+    /* 决定了这个东西在盒子里的哪个位置 */
+    align-items: center;
+    /* justify-content 属性定义了浏览器之间，如何分配顺着弹性容器主轴(或者网格行轴) 的元素之间及其周围的空间 */
+    justify-content: center;
+}
+ 
+.key {
+    /* rem根元素的字体大小 */
+    border: .4rem solid black;
+    /* 属性 border-radius 允许你设置元素的外边框圆角。当使用一个半径时确定一个圆形，当使用两个半径时确定一个椭圆。这个(椭)圆与边框的交集形成圆角效果。 */
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 10rem;
+    text-align: center;
+    background: rgba(196, 248, 7, 0.4);
+    text-shadow: 0 0 .5rem #ffc600;
+}
+ 
+.playing {
+    /* 缩放，第一个表示x，第二个表示y */
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+  }
+  
+  kbd {
+    display: block;
+    font-size: 4rem;
+  }
+  
+  .sound {
+    font-size: 1.2rem;
+    /* text-transform CSS属性指定如何将元素的文本大写。它可以用于使文本显示为全大写或全小写，也可单独对每一个单词进行操作。 */
+    text-transform: uppercase;
+    /* letter-spacing 属性用于设置文本字符的间距表现。 */
+    letter-spacing: .1rem;
+    color: #ffc600;
+  }
