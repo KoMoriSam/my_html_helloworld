@@ -1,0 +1,88 @@
+html {
+	background: rgba(0, 0, 0, 0.7) url('../media/image/dirt.png');
+	background-size: auto 50%;
+	/* background-repeat: no-repeat; */
+	/* background-attachment: fixed; */
+    background-blend-mode: darken;
+}
+
+body,
+td,
+th {
+	font-family: Minecraft, Unifont, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 32px;
+	text-align: center;
+	color: whitesmoke;
+}
+
+.button {
+	border: none;
+	font-family: Minecraft, Unifont, sans-serif;
+	width: 480px;
+	height: 48px;
+	background: url('../media/image/button/button_default.png');
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-origin: border-box;
+	background-clip: border-box;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.button:hover{
+	transition: 0.1s;
+	border: none;
+	font-family: Minecraft, Unifont, sans-serif;
+	width: 480px;
+	height: 48px;
+	background: url('../media/image/button/button_hover.png');
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-origin: border-box;
+	background-clip: border-box;
+	text-align: center;
+	text-decoration: none;
+	color: gold;
+	font-size: 20px;
+}
+
+.button:focus{
+		transition: 0.1s;
+	border: none;
+	font-family: Minecraft, Unifont, sans-serif;
+	width: 480px;
+	height: 48px;
+	background: url('../media/image/button/button_pressed.png');
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-origin: border-box;
+	background-clip: border-box;
+	text-align: center;
+	text-decoration: none;
+	color: gold;
+	font-size: 20px;
+}
+
+.buttonDark {
+	border: none;
+	font-family: Minecraft, Unifont, sans-serif;
+	width: 480px;
+	height: 48px;
+	background: url('../media/image/button/button_locked.png');
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-origin: border-box;
+	background-clip: border-box;
+	text-align: center;
+	text-decoration: none;
+	color: whitesmoke;
+	font-size: 20px;
+	cursor: not-allowed;
+}
