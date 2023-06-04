@@ -86,7 +86,7 @@ img {
 }
 
 .button:hover {
-	transition: 0.1s;
+	transition: 0s;
 	border: none;
 	font-family: Minecraft, Unifont, sans-serif;
 	width: 420px;
@@ -103,14 +103,14 @@ img {
 	background-clip: border-box;
 	text-align: center;
 	text-decoration: none;
-	color: gold;
+	color: yellow;
 	text-shadow: 1px 1px black;
 	font-size: 1em;
 	letter-spacing: 1px;
 }
 
 .button:focus {
-	transition: 0.1s;
+	transition: 0s;
 	border: none;
 	font-family: Minecraft, Unifont, sans-serif;
 	width: 420px;
@@ -127,7 +127,7 @@ img {
 	background-clip: border-box;
 	text-align: center;
 	text-decoration: none;
-	color: gold;
+	color: yellow;
 	text-shadow: 1px 1px black;
 	font-size: 1em;
 	letter-spacing: 1px;
@@ -202,33 +202,34 @@ img#musicico {
 /* 闪烁文字 */
 .shiningText {
 	position: absolute;
-	top: 5%;
-	left: 40%;
-	right: 10%;
-	transform: rotate(-30deg);
+	top: 4%;
+	left: 42%;
+	right: 8%;
+	transform: rotate(-15deg);
 	font-size: 1.5em;
-	color: gold;
-	text-shadow: 1px 1px black;
+	color: yellow;
+	text-shadow: 2px 2px #3f3f00;
 	animation-name: shining;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
-	animation-duration: 5s;
+	animation-duration: 1.5s;
 }
 
+/* 闪烁文字动画 */
 @keyframes shining {
 	0% {
-		transform: scale(1) rotate(-30deg);
+		transform: scale(1) rotate(-15deg);
 	}
 
 	25% {
-		transform: scale(.8) rotate(-30deg);
+		transform: scale(.95) rotate(-15deg);
 	}
 
 	50% {
-		transform: scale(1) rotate(-30deg);
+		transform: scale(1) rotate(-15deg);
 	}
 
 	75% {
-		transform: scale(.8) rotate(-30deg);
+		transform: scale(.95) rotate(-15deg);
 	}
 }
