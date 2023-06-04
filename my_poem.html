@@ -4,6 +4,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>终末之诗 | Minecraft Space!</title>
+	<style>
+		html {
+			background: rgba(0, 0, 0, 0.7) url('../media/image/background/end.png');
+			background-size: 10%;
+			background-attachment: fixed;
+			background-blend-mode: darken;
+		}
+	</style>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<script type="text/javascript" src="./js/script.js"></script>
 </head>
@@ -24,8 +32,8 @@
 		<p id="splash" class='shiningText'></p>
 
 		<h1>终末之诗</h1>
-	
-		<input type="text" placeholder="请输入您的名字">
+
+		<input id="name" name="name" type="text" placeholder="请输入您的名字" /><button class="smallButton" onclick="playSound()">start</button>
 
 		<p><button class="button" onclick="playSound(); location.href='./my_helloworld.html'">返回主页</button></p>
 
