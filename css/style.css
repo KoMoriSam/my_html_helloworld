@@ -43,13 +43,6 @@ div {
 	bottom: 10%;
 }
 
-html {
-	background: rgba(0, 0, 0, 0.7) url('../media/image/dirt.png');
-	background-size: 10%;
-	background-attachment: fixed;
-	background-blend-mode: darken;
-}
-
 h1 {
 	font-weight: normal;
 	font-size: 2em;
@@ -89,7 +82,7 @@ img {
 	max-width: 75%;
 	max-height: 75%;
 	border-style: solid;
-	display: inline-block; 
+	display: inline-block;
 	padding: 4px 8px;
 	background: url('../media/image/button/button_default\ _body.png');
 	border-image-source: url('../media/image/button/button_default.png');
@@ -113,7 +106,7 @@ img {
 	max-width: 75%;
 	max-height: 75%;
 	border-style: solid;
-	display: inline-block; 
+	display: inline-block;
 	padding: 4px 8px;
 	background: url('../media/image/button/button_hover\ _body.png');
 	border-image-source: url('../media/image/button/button_hover.png');
@@ -137,7 +130,7 @@ img {
 	max-width: 75%;
 	max-height: 75%;
 	border-style: solid;
-	display: inline-block; 
+	display: inline-block;
 	padding: 4px 8px;
 	background: url('../media/image/button/button_hover\ _body.png');
 	border-image-source: url('../media/image/button/button_pressed.png');
@@ -161,7 +154,7 @@ img {
 	max-width: 75%;
 	max-height: 75%;
 	border-style: solid;
-	display: inline-block; 
+	display: inline-block;
 	padding: 4px 8px;
 	background: url('../media/image/button/button_locked\ _body.png');
 	border-image-source: url('../media/image/button/button_locked.png');
@@ -178,6 +171,80 @@ img {
 	cursor: not-allowed;
 }
 
+/* 小按钮 */
+.smallButton {
+	border: none;
+	font-family: Minecraft, Unifont, sans-serif;
+	width: 120px;
+	height: 40px;
+	max-width: 75%;
+	max-height: 75%;
+	border-style: solid;
+	display: inline-block;
+	padding: 4px 8px;
+	background: url('../media/image/button/button_default\ _body.png');
+	border-image-source: url('../media/image/button/button_default.png');
+	border-width: 8px;
+	border-image-slice: 16;
+	border-image-repeat: round;
+	border-image-width: 8px;
+	text-align: center;
+	text-decoration: none;
+	color: whitesmoke;
+	text-shadow: 1px 1px black;
+	font-size: 0.9em;
+	letter-spacing: 1px;
+}
+
+.smallButton:hover {
+	border: none;
+	font-family: Minecraft, Unifont, sans-serif;
+	width: 120px;
+	height: 40px;
+	max-width: 75%;
+	max-height: 75%;
+	border-style: solid;
+	display: inline-block;
+	padding: 4px 8px;
+	background: url('../media/image/button/button_hover\ _body.png');
+	border-image-source: url('../media/image/button/button_hover.png');
+	border-width: 8px;
+	border-image-slice: 16;
+	border-image-repeat: round;
+	border-image-width: 8px;
+	text-align: center;
+	text-decoration: none;
+	color: yellow;
+	text-shadow: 1px 1px black;
+	font-size: 0.9em;
+	letter-spacing: 1px;
+}
+
+.smallButton:focus {
+	border: none;
+	font-family: Minecraft, Unifont, sans-serif;
+	width: 120px;
+	height: 40px;
+	max-width: 75%;
+	max-height: 75%;
+	border-style: solid;
+	display: inline-block;
+	padding: 4px 8px;
+	background: url('../media/image/button/button_hover\ _body.png');
+	border-image-source: url('../media/image/button/button_pressed.png');
+	border-width: 8px;
+	border-image-slice: 16;
+	border-image-repeat: round;
+	border-image-width: 8px;
+	text-align: center;
+	text-decoration: none;
+	color: yellow;
+	text-shadow: 1px 1px black;
+	font-size: 0.9em;
+	letter-spacing: 1px;
+}
+
+
 
 /* 输入框 */
 input {
@@ -189,7 +256,7 @@ input {
 	max-width: 75%;
 	max-height: 75%;
 	border-style: solid;
-	display: inline-block; 
+	display: inline-block;
 	padding: 4px 8px;
 	background: url('../media/image/input_board/input_board_body.png');
 	border-image-source: url('../media/image/input_board/input_board_default.png');
@@ -214,7 +281,7 @@ input:focus {
 	max-width: 75%;
 	max-height: 75%;
 	border-style: solid;
-	display: inline-block; 
+	display: inline-block;
 	padding: 4px 8px;
 	background: url('../media/image/input_board/input_board_body.png');
 	border-image-source: url('../media/image/input_board/input_board_hover.png');
