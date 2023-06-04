@@ -1,10 +1,8 @@
-# HTML 学习笔记
+# 📖 HTML 学习笔记
 
-## 📄 一些代码
+## 🌟 闪烁的标语 (ShiningText!)
 
-### 🌟 闪烁文字 (ShiningText!)
-
-1. 首先准备如下格式的 json
+1. 首先准备如下格式的 `json` 文件
 
 ```json
 {
@@ -21,7 +19,7 @@
 }
 ```
 
-2. js 代码
+2. `js` 代码
 
 ```javascript
 // 获取 json 文件中 splashes 数组内的字符串数据
@@ -36,7 +34,7 @@ fetch('.text.json')  // 设置文本路径
 	.catch(error => console.error(error));
 ```
 
-3. css 代码
+3. `css` 代码
 
 ```css
 /* 闪烁文字 */
@@ -78,8 +76,102 @@ fetch('.text.json')  // 设置文本路径
 ```
    
 
-4. html 代码
+4. `html` 代码
 
 ```html
 <p id="splash" class='shiningText'></p>
+```
+
+## 🪟 使各类元素自适应窗口
+
+### 🖱️ 按钮元素自适应 (特指使用背景图的按钮)
+
+1. 准备好按钮背景图
+
+- 按钮主背景图
+- 按钮边框图
+
+2. `css` 代码
+
+```css
+.button {
+	border: none;
+	font-family: Minecraft, Unifont, sans-serif;
+	width: 460px;
+	height: 46px;
+	max-width: 75%;
+	max-height: 75%;
+	border-style: solid;
+	display: inline-block;
+	padding: 4px 8px;
+    /* 按钮主背景图 */
+	background: url('./img/button_body.png');
+    /* 按钮边框图 */
+	border-image-source: url('./img/button.png');
+    /* 按钮边框宽度 */
+	border-width: 8px;
+	border-image-slice: 16;
+	border-image-repeat: round;
+	border-image-width: 8px;
+	text-align: center;
+	text-decoration: none;
+	color: whitesmoke;
+	text-shadow: 1px 1px black;
+	font-size: 1em;
+	letter-spacing: 1px;
+}
+```
+
+### 📑 文字元素自适应
+
+1. `css` 代码
+
+```css
+div {
+	font-family: Minecraft, Unifont, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	line-height: 32px;
+	text-align: center;
+	color: whitesmoke;
+	text-shadow: 1px 1px black;
+	transition: font-size 0.2s ease-out;
+}
+
+@media only screen and (max-width: 1200px) {
+	div {
+		font-size: 18px;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	div {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	div {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	div {
+		font-size: 12px;
+	}
+}
+```
+
+### 🖼️ 图片字元素自适应
+
+1. `css` 代码
+
+```css
+img {
+	max-width: 100%;
+	max-height: 100%;
+	margin: auto;
+}
 ```
