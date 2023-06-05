@@ -1,5 +1,15 @@
-div {
-	font-family: Minecraft, Unifont, sans-serif;
+@font-face {
+	font-family: Minecraft;
+	src: url("../media/font/minecraft.ttf");
+}
+
+@font-face {
+	font-family: Unifont;
+	src: url("../media/font/unifont-15.0.01.otf");
+}
+
+div {	
+	font-family: Minecraft, Unifont;
 	font-size: 18px;
 	font-weight: normal;
 	letter-spacing: 1px;
@@ -76,7 +86,7 @@ img {
 /* 可变按钮 */
 .button {
 	border: none;
-	font-family: Minecraft, Unifont, sans-serif;
+	font-family: Minecraft, Unifont;
 	width: 460px;
 	height: 46px;
 	max-width: 75%;
@@ -100,7 +110,7 @@ img {
 
 .button:hover {
 	border: none;
-	font-family: Minecraft, Unifont, sans-serif;
+	font-family: Minecraft, Unifont;
 	width: 460px;
 	height: 46px;
 	max-width: 75%;
@@ -124,7 +134,7 @@ img {
 
 .button:focus {
 	border: none;
-	font-family: Minecraft, Unifont, sans-serif;
+	font-family: Minecraft, Unifont;
 	width: 460px;
 	height: 46px;
 	max-width: 75%;
@@ -148,7 +158,7 @@ img {
 
 .buttonLocked {
 	border: none;
-	font-family: Minecraft, Unifont, sans-serif;
+	font-family: Minecraft, Unifont;
 	width: 460px;
 	height: 46px;
 	max-width: 75%;
@@ -174,7 +184,7 @@ img {
 /* 小按钮 */
 .smallButton {
 	border: none;
-	font-family: Minecraft, Unifont, sans-serif;
+	font-family: Minecraft, Unifont;
 	width: 120px;
 	height: 40px;
 	max-width: 75%;
@@ -198,7 +208,7 @@ img {
 
 .smallButton:hover {
 	border: none;
-	font-family: Minecraft, Unifont, sans-serif;
+	font-family: Minecraft, Unifont;
 	width: 120px;
 	height: 40px;
 	max-width: 75%;
@@ -222,7 +232,7 @@ img {
 
 .smallButton:focus {
 	border: none;
-	font-family: Minecraft, Unifont, sans-serif;
+	font-family: Minecraft, Unifont;
 	width: 120px;
 	height: 40px;
 	max-width: 75%;
@@ -250,7 +260,7 @@ img {
 input {
 	outline-style: none;
 	border: none;
-	font-family: Minecraft, Unifont, sans-serif;
+	font-family: Minecraft, Unifont;
 	width: 280px;
 	height: 16px;
 	max-width: 75%;
@@ -275,7 +285,7 @@ input {
 input:focus {
 	outline-style: none;
 	border: none;
-	font-family: Minecraft, Unifont, sans-serif;
+	font-family: Minecraft, Unifont;
 	width: 280px;
 	height: 16px;
 	max-width: 75%;
