@@ -1,6 +1,6 @@
 # :book: HTML 学习笔记
 
-目录
+---> 目录
 
 - [:book: HTML 学习笔记](#book-html-学习笔记)
   - [:star2: 闪烁的标语](#star2-闪烁的标语)
@@ -12,9 +12,9 @@
 
 ## :star2: 闪烁的标语
 
-- 首先准备如下格式的 `javascripton` 文件
+- 首先准备如下格式的 `json` 文件
 
-```javascripton
+```json
 {
   "splashes": [
     "As seen on TV!", 
@@ -29,10 +29,10 @@
 }
 ```
 
-- `javascript` 代码
+- `javascript`
 
 ```javascript
-// 获取 javascripton 文件中 splashes 数组内的字符串数据
+// 获取 json 文件中 splashes 数组内的字符串数据
 fetch('.text.javascripton')  // 设置文本路径
     .then(response => response.javascripton())
     .then(data => {
@@ -44,7 +44,7 @@ fetch('.text.javascripton')  // 设置文本路径
     .catch(error => console.error(error));
 ```
 
-- `css` 代码
+- `css`
 
 ```css
 /* 闪烁文字 */
@@ -85,7 +85,7 @@ fetch('.text.javascripton')  // 设置文本路径
 }
 ```
 
-- `html` 代码
+- `html`
 
 ```html
 <p id="splash" class='shiningText'></p>
@@ -99,7 +99,7 @@ fetch('.text.javascripton')  // 设置文本路径
   - 按钮主背景图
   - 按钮边框图
 
-- `css` 代码
+- `css`
 
 ```css
 .button {
@@ -132,7 +132,7 @@ fetch('.text.javascripton')  // 设置文本路径
 
 ### :bookmark_tabs: 文本元素
 
-- `css` 代码
+- `css`
 
 ```css
 div {
@@ -174,7 +174,7 @@ div {
 
 ### :framed_picture: 图片元素
 
-- `css` 代码
+- `css`
 
 ```css
 img {
@@ -192,13 +192,13 @@ img {
   - `./background/panorama_2.png`
   - `./background/panorama_3.png`
 
-- `javascript` 代码
+- `javascript`
   - 实时监测并刷新网页宽度和高度
 
 ```javascript
 const root = document.documentElement;
 
-// 监听resize事件，实时更新CSS变量
+// 监听 resize 事件，实时更新 CSS 变量
 window.addEventListener('resize', function() {
     // 获取网页宽度
     const pageWidth = window.innerWidth;
@@ -210,6 +210,7 @@ window.addEventListener('resize', function() {
     // 将高度赋值给CSS变量
     root.style.setProperty('--page-height', `${pageHeight}px`);
 
+    // 通过比较页面宽高来设置 box 宽度
     if (pageHeight >= pageWidth) {
         const boxWidth = pageHeight;
         root.style.setProperty('--box-width', `${boxWidth}px`);
@@ -219,11 +220,12 @@ window.addEventListener('resize', function() {
     }
 });
 
+// 网页初始加载前监测一次, 确保 3D 盒子正常显示
 window.dispatchEvent(new Event('resize'));
 
 ```
 
-- `css` 代码
+- `css`
   - :warning: 由于一些神秘的原因这里的样式需要内嵌至 `html` 头文件中
 
 ```css
@@ -294,7 +296,7 @@ window.dispatchEvent(new Event('resize'));
 </style>
 ```
 
-- `html` 代码
+- `html`
 
 ```html
 <div class="box">
