@@ -29,32 +29,35 @@
 
 	<div class="main">
 
-		<img src="./media/image/title.png" width="640" style="margin: 0 0 5em 0;">
+		<p><img src="./media/image/title/end_poem.png" width="540"></p>
 		<p id="splash" class='shiningText'></p>
+
 
 		<h1>终末之诗</h1>
 
 		<input type="text" id="playername" name="playername" placeholder="请输入您的名字">
-		<button class="smallButton" onclick="playSound(); setPlayerName()">Set</button>
+		<button class="vButton" onclick="playSound(); setPlayerName()">Set</button>
 
 		<p>
 		<div id="text"></div>
 		</p>
 
-		<p><button class="button" onclick="playSound(); location.href='./index.html'">返回主页</button></p>
+		<p><button class="button" onclick="playSound(); location.href='./'">返回主页</button></p>
 
-		<p><audio id="music" autoplay="autoplay" loop="loop" src="./media/audio/C418 - Minecraft.mp3"></audio>
+		<div class="foot">
+			<p><audio id="music" autoplay="autoplay" loop="loop" src="./media/audio/C418 - Minecraft.mp3"></audio>
 
-			<img id="musicico" onclick="musiccc()" src="./media/image/icon/music.svg" width="16px">
-			C418 - Minecraft<br> --&gt; <a href="./poem_test.html">测试版终末之诗 !</a> &lt;-- <br>by KoMoriSam!!
-		</p>
+				<img id="musicico" onclick="musicStop()" src="./media/image/icon/jukebox.png" width="16px">
+				C418 - Minecraft<br> --&gt; <a href="./poem_test.html">测试版终末之诗 !</a> &lt;-- <br>by KoMoriSam!!
+			</p>
 
 
-		<p> --&gt; <img src="./media/image/icon/github.svg" width="16px"> <a
-				href="https://github.com/KoMoriSam">GitHub</a> &lt;--
-			<br> --&gt; <img src="https://www.bilibili.com/favicon.ico" width="16px"> <a
-				href="https://space.bilibili.com/71104942">Bilibili</a> &lt;--
-		</p>
+			<p> --&gt; <img src="./media/image/icon/github.svg" width="16px"> <a
+					href="https://github.com/KoMoriSam">GitHub</a> &lt;--
+				<br> --&gt; <img src="https://www.bilibili.com/favicon.ico" width="16px"> <a
+					href="https://space.bilibili.com/71104942">Bilibili</a> &lt;--
+			</p>
+		</div>
 
 	</div>
 

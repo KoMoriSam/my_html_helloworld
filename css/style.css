@@ -77,22 +77,28 @@ h1 {
 	margin: -0.5em 0 1em 0
 }
 
+.foot {
+	position:fixed;
+	bottom:0px;
+	text-align: center;
+	width: 100%;
+}
+
 a {
 	color: dodgerblue;
 }
 
 img {
 	max-width: 100%;
-	max-height: 100%;
 	margin: auto;
 }
 
-/* 可变按钮 */
+/* 按钮 */
 .button {
 	border: none;
 	font-family: Minecraft, Unifont;
-	width: 460px;
-	height: 46px;
+	width: 25.5em;
+	height: 2.55em;
 	max-width: 75%;
 	max-height: 75%;
 	border-style: solid;
@@ -115,8 +121,8 @@ img {
 .button:hover {
 	border: none;
 	font-family: Minecraft, Unifont;
-	width: 460px;
-	height: 46px;
+	width: 25.5em;
+	height: 2.55em;
 	max-width: 75%;
 	max-height: 75%;
 	border-style: solid;
@@ -139,8 +145,8 @@ img {
 .button:focus {
 	border: none;
 	font-family: Minecraft, Unifont;
-	width: 460px;
-	height: 46px;
+	width: 25.5em;
+	height: 2.55em;
 	max-width: 75%;
 	max-height: 75%;
 	border-style: solid;
@@ -163,8 +169,8 @@ img {
 .buttonLocked {
 	border: none;
 	font-family: Minecraft, Unifont;
-	width: 460px;
-	height: 46px;
+	width: 25.5em;
+	height: 2.55em;
 	max-width: 75%;
 	max-height: 75%;
 	border-style: solid;
@@ -186,11 +192,81 @@ img {
 }
 
 /* 小按钮 */
-.smallButton {
+.hButton {
 	border: none;
 	font-family: Minecraft, Unifont;
-	width: 120px;
-	height: 40px;
+	width: 12.25em;
+	height: 2.55em;
+	max-width: 75%;
+	max-height: 75%;
+	border-style: solid;
+	display: inline-block;
+	padding: 4px 8px;
+	background: url('../media/image/button/button_default\ _body.png');
+	border-image-source: url('../media/image/button/button_default.png');
+	border-width: 8px;
+	border-image-slice: 16;
+	border-image-repeat: round;
+	border-image-width: 8px;
+	text-align: center;
+	text-decoration: none;
+	color: whitesmoke;
+	text-shadow: 1px 1px black;
+	font-size: 1em;
+	letter-spacing: 1px;
+}
+
+.hButton:hover {
+	border: none;
+	font-family: Minecraft, Unifont;
+	width: 12.25em;
+	height: 2.55em;
+	max-width: 75%;
+	max-height: 75%;
+	border-style: solid;
+	display: inline-block;
+	padding: 4px 8px;
+	background: url('../media/image/button/button_hover\ _body.png');
+	border-image-source: url('../media/image/button/button_hover.png');
+	border-width: 8px;
+	border-image-slice: 16;
+	border-image-repeat: round;
+	border-image-width: 8px;
+	text-align: center;
+	text-decoration: none;
+	color: yellow;
+	text-shadow: 1px 1px black;
+	font-size: 1em;
+	letter-spacing: 1px;
+}
+
+.hButton:focus {
+	border: none;
+	font-family: Minecraft, Unifont;
+	width: 12.25em;
+	height: 2.55em;
+	max-width: 75%;
+	max-height: 75%;
+	border-style: solid;
+	display: inline-block;
+	padding: 4px 8px;
+	background: url('../media/image/button/button_hover\ _body.png');
+	border-image-source: url('../media/image/button/button_pressed.png');
+	border-width: 8px;
+	border-image-slice: 16;
+	border-image-repeat: round;
+	border-image-width: 8px;
+	text-align: center;
+	text-decoration: none;
+	color: yellow;
+	text-shadow: 1px 1px black;
+	font-size: 1em;
+	letter-spacing: 1px;
+}
+
+.vButton {
+	border: none;
+	font-family: Minecraft, Unifont;
 	max-width: 75%;
 	max-height: 75%;
 	border-style: solid;
@@ -210,11 +286,9 @@ img {
 	letter-spacing: 1px;
 }
 
-.smallButton:hover {
+.vButton:hover {
 	border: none;
 	font-family: Minecraft, Unifont;
-	width: 120px;
-	height: 40px;
 	max-width: 75%;
 	max-height: 75%;
 	border-style: solid;
@@ -234,11 +308,9 @@ img {
 	letter-spacing: 1px;
 }
 
-.smallButton:focus {
+.vButton:focus {
 	border: none;
 	font-family: Minecraft, Unifont;
-	width: 120px;
-	height: 40px;
 	max-width: 75%;
 	max-height: 75%;
 	border-style: solid;
@@ -313,27 +385,30 @@ input:focus {
 
 /* 音乐播放和暂停 */
 img#musicico {
-	animation-name: music;
-	animation-timing-function: linear;
-	animation-duration: 10s;
+	filter: drop-shadow(1px 1px black);
+	animation-name: boomboom;
+	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
+	animation-duration: 1.5s;
 }
 
-/* 实现动画的旋转 */
-@keyframes music {
+@keyframes boomboom {
 	0% {
-		transform: rotate(0deg);
+		transform: scale(1);
+	}
+
+	25% {
+		transform: scale(1.15);
 	}
 
 	50% {
-		transform: rotate(180deg);
+		transform: scale(1);
 	}
 
-	100% {
-		transform: rotate(365deg);
+	75% {
+		transform: scale(1.15);
 	}
 }
-
 
 .app {
 	width: 100%;
@@ -356,8 +431,8 @@ img#musicico {
 /* 闪烁文字 */
 .shiningText {
 	position: absolute;
-	top: 4%;
-	left: 42%;
+	top: 8%;
+	left: 45%;
 	right: 8%;
 	transform: rotate(-15deg);
 	font-size: 1.5em;
