@@ -18,9 +18,11 @@
 ### :arrow_up_small: 可复用的导航栏
 
 - 首先准备一份导航栏，存储在一个单独的 `HTML` 中，以备调用
-  - `nav.html`
+  - `nav.html` - 导航栏文件
+  - `index.html` - 主页文件示例
 
 ```html
+<!-- nav.html -->
 <!-- 注意在此处调用接下来要用到的 js 代码 -->
 <script src="js/script.js"></script>
 <div class="sidebar-menu">
@@ -35,10 +37,9 @@
   </nav>
 </div>
 ```
-
-  - `index.html`
   
 ```html
+<!-- index.html -->
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
