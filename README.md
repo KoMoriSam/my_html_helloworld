@@ -3,14 +3,124 @@
 ---> 目录
 
 - [:book: HTML 学习笔记](#book-html-学习笔记)
-  - [:star2: 闪烁的标语](#star2-闪烁的标语)
-  - [:window: 使各类元素自适应窗口](#window-使各类元素自适应窗口)
-    - [:computer\_mouse: 按钮元素 (特指使用背景图的按钮)](#computer_mouse-按钮元素-特指使用背景图的按钮)
-    - [:bookmark\_tabs: 文本元素](#bookmark_tabs-文本元素)
-    - [:framed\_picture: 图片元素](#framed_picture-图片元素)
-  - [:ice\_cube: 3D 盒子](#ice_cube-3d-盒子)
+  - [:houses: 个人主页](#houses-个人主页)
+    - [:arrow\_up\_small: 可复用的导航栏](#arrow_up_small-可复用的导航栏)
+  - [:clipboard: Minecraft UI 的 `HTML` 重现](#clipboard-minecraft-ui-的-html-重现)
+    - [:star2: 闪烁的标语](#star2-闪烁的标语)
+    - [:window: 使各类元素自适应窗口](#window-使各类元素自适应窗口)
+      - [:computer\_mouse: 按钮元素 (特指使用背景图的按钮)](#computer_mouse-按钮元素-特指使用背景图的按钮)
+      - [:bookmark\_tabs: 文本元素](#bookmark_tabs-文本元素)
+      - [:framed\_picture: 图片元素](#framed_picture-图片元素)
+    - [:ice\_cube: 3D 盒子](#ice_cube-3d-盒子)
 
-## :star2: 闪烁的标语
+## :houses: 个人主页
+
+### :arrow_up_small: 可复用的导航栏
+
+- 首先准备一份导航栏，存储在一个单独的 `HTML` 中，以备调用
+  - `nav.html`
+
+```html
+<!-- 注意在此处调用接下来要用到的 js 代码 -->
+<script src="js/script.js"></script>
+<div class="sidebar-menu">
+  <nav>
+    <ul>
+      <!-- 注意在此处给每个标签添加 id -->
+      <a id="home" href="/">主页</a>
+      <a id="about" href="about.html">关于我</a>
+      <a id="project" href="project.html">项目</a>
+      <a id="contact" href="contact.html">联系我</a>
+    </ul>
+  </nav>
+</div>
+```
+
+  - `index.html`
+  
+```html
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!-- 注意调用以下 css 库 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <!-- 注意调用以下 js 库 -->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="sidebar-menu">
+        <div id="nav"></div>
+    </div>
+
+    <script>
+        $("#nav").load("nav.html");
+    </script>
+
+</body>
+```
+
+- 接下来设置一些简单的 `css` 样式
+
+```css
+nav ul {
+    margin: 0;
+    padding: 0;
+    width: 16rem;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(100, 56, 72, 0.75);
+}
+
+nav ul a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+}
+
+ul a {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+}
+
+ul a:hover:not(.active) {
+    color: #4CAF50;
+    background-color: #555;
+    font-weight: bold;
+}
+
+/* 导航栏标签激活 */
+ul a.active {
+    background-color: #4CAF50;
+    color: whitesmoke;
+    font-weight: bold;
+}
+```
+
+- 使用 `js` 监测当前页面名称实现对应标签激活状态
+
+```javascript
+// 导航栏激活强调色
+$(document).ready(function() {    // 等待页面加载完成
+    var path = window.location.pathname;  // 获取当前页面路径
+    // 根据路径更改导航栏标题背景色
+    if (path === '/' || path === '/index.html') {
+      $('#home').addClass('active');
+    } else if (path === '/about.html') {
+      $('#about').addClass('active');
+    } else if (path === '/project.html') {
+      $('#project').addClass('active');
+    } else if (path === '/contact.html') {
+      $('#contact').addClass('active');
+    }
+  });
+```
+
+## :clipboard: Minecraft UI 的 `HTML` 重现
+
+### :star2: 闪烁的标语
 
 - 首先准备如下格式的 `json` 文件
 
@@ -91,9 +201,9 @@ fetch('.text.javascripton')  // 设置文本路径
 <p id="splash" class='shiningText'></p>
 ```
 
-## :window: 使各类元素自适应窗口
+### :window: 使各类元素自适应窗口
 
-### :computer_mouse: 按钮元素 (特指使用背景图的按钮)
+#### :computer_mouse: 按钮元素 (特指使用背景图的按钮)
 
 - 准备好按钮背景图
   - 按钮主背景图
@@ -113,9 +223,9 @@ fetch('.text.javascripton')  // 设置文本路径
     display: inline-block;
     padding: 4px 8px;
     /* 按钮主背景图 */
-    background: url('./img/button_body.png');
+    background: url('img/button_body.png');
     /* 按钮边框图 */
-    border-image-source: url('./img/button.png');
+    border-image-source: url('img/button.png');
     /* 按钮边框宽度 */
     border-width: 8px;
     border-image-slice: 16;
@@ -130,7 +240,7 @@ fetch('.text.javascripton')  // 设置文本路径
 }
 ```
 
-### :bookmark_tabs: 文本元素
+#### :bookmark_tabs: 文本元素
 
 - `css`
 
@@ -172,7 +282,7 @@ div {
 }
 ```
 
-### :framed_picture: 图片元素
+#### :framed_picture: 图片元素
 
 - `css`
 
@@ -184,13 +294,13 @@ img {
 }
 ```
 
-## :ice_cube: 3D 盒子
+### :ice_cube: 3D 盒子
 
 - 首先准备立方体所需要的侧表面所需要的图片, 例如:
-  - `./background/panorama_0.png`
-  - `./background/panorama_1.png`
-  - `./background/panorama_2.png`
-  - `./background/panorama_3.png`
+  - `background/panorama_0.png`
+  - `background/panorama_1.png`
+  - `background/panorama_2.png`
+  - `background/panorama_3.png`
 
 - `javascript`
   - 实时监测并刷新网页宽度和高度
@@ -255,7 +365,7 @@ window.dispatchEvent(new Event('resize'));
     }
 
     .out-front {
-        background-image: url("./background/panorama_0.png");
+        background-image: url("background/panorama_0.png");
         background-repeat: no-repeat;
         width: 100%;
         height: 100%;
@@ -265,7 +375,7 @@ window.dispatchEvent(new Event('resize'));
         }
 
     .out-back {
-        background-image: url("./background/panorama_2.png");
+        background-image: url("background/panorama_2.png");
         background-repeat: no-repeat;
         width: 100%;
         height: 100%;
@@ -275,7 +385,7 @@ window.dispatchEvent(new Event('resize'));
     }
 
     .out-left {
-        background-image: url("./background/panorama_3.png");
+        background-image: url("background/panorama_3.png");
         background-repeat: no-repeat;
         width: 100%;
         height: 100%;
@@ -285,7 +395,7 @@ window.dispatchEvent(new Event('resize'));
         }
 
     .out-right {
-        background-image: url("./background/panorama_1.png");
+        background-image: url("background/panorama_1.png");
         background-repeat: no-repeat;
         width: 100%;
         height: 100%;
