@@ -67,10 +67,9 @@
 
 ```css
 nav ul {
-    margin: 0;
+    height: 100%;
     padding: 0;
     width: 16rem;
-    height: 100%;
     position: fixed;
     background-color: rgb(100, 56, 72, 0.75);
 }
